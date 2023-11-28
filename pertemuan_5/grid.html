@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: grid;
+            place-content: center;
+
+        }
+        .container{
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            grid-template-areas: "side nav nav nav"
+                                 "side main main main"
+                                 "side main main main";
+            grid-template-rows: 100px 300px;
+            grid-template-columns: 200px 400px;
+
+        }
+        .nav{
+            grid-area: nav;
+            background-color: yellow;
+        }
+        .side{
+            grid-area: side;
+            background-color: red;
+        }
+        .main{
+            grid-area: main;
+            background-color: pink;
+        }
+        
+    </style>
+    <title>Display | Grid</title>
+</head>
+<body>
+    <div class="container">
+        <div class="grid nav">Navbar</div>
+        <div class="grid side">Sidebar</div>
+        <div class="grid main">Main content</div>
+    </div>
+</body>
+</html>
